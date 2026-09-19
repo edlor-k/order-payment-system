@@ -22,6 +22,16 @@ spring:
 springdoc:
   swagger-ui:
     path: /swagger-ui
+clients:
+  stub:
+    base-url: ${PAYMENT_STUB_URL:http://localhost:8081}
+    connect-timeout: 5s
+    read-timeout: 30s
+task-execution:
+  dispatcher:
+    max-attempts: 100
+    retry-delay: 30s
+  poller:
+    retry-delay: 30s
+    batch-size: 5
 
-payment:
-  stub-url: ${PAYMENT_STUB_URL:http://localhost:8081}

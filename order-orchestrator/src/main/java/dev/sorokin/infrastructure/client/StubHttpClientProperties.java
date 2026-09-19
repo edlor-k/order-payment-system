@@ -1,4 +1,4 @@
-package dev.sorokin.external;
+package dev.sorokin.infrastructure.client;
 
 import lombok.Getter;
 import lombok.Setter;

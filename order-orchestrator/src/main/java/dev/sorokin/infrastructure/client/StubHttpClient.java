@@ -1,4 +1,4 @@
-package dev.sorokin.external;
+package dev.sorokin.infrastructure.client;
 
 import dev.sorokin.api.payment.AuthorizePaymentRequestDto;
 import dev.sorokin.api.payment.AuthorizePaymentResponseDto;

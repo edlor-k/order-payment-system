@@ -1,7 +1,7 @@
-package dev.sorokin.api;
+package dev.sorokin.api.order;
 
-import dev.sorokin.domain.OrderEntity;
-import dev.sorokin.domain.OrderService;
+import dev.sorokin.application.order.OrderService;
+import dev.sorokin.domain.order.OrderEntity;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -46,6 +46,12 @@ public class OrderController {
         return OrderDto.builder()
                 .id(order.getId())
                 .address(order.getAddress())
+                .finalAmount(order.getFinalAmount())
+                .clientEstimate(order.getClientEstimate())
+                .authorizedAmount(order.getAuthorizedAmount())
+                .capturedAmount(order.getCapturedAmount())
+                .paymentStatus(order.getPaymentStatus())
+                .failureReason(order.getFailureReason())
                 .build();
     }
 }
