@@ -1,5 +1,6 @@
-package dev.sorokin.domain;
+package dev.sorokin.infrastructure.persistence.order;
 
+import dev.sorokin.domain.order.OrderEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

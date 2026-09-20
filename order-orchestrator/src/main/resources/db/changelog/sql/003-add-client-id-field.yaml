@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-client-id-:003
+      author: add-client-id-
+      preConditions:
+        - onFail: MARK_RAN
+        - onError: HALT
+        - not:
+            - columnExists:
+                tableName: orders
+                columnName: client_id
+      changes:
+        - addColumn:
+            tableName: orders
+            columns:
+              - column:
+                  name: client_id
+                  type: BIGINT
